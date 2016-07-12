@@ -31,6 +31,10 @@ namespace AirlineReservationSystem
             seatingChart.Add("Seat 8");
             seatingChart.Add("Seat 9");
             seatingChart.Add("Seat 10");
+            for (int s = 0; i < length; i++)
+            {
+
+            }
 
             #endregion
 
@@ -42,11 +46,20 @@ namespace AirlineReservationSystem
             assignedSeats.Add("Seat 7 Assigned");
             assignedSeats.Add("Seat 10 Assigned");
             assignedSeats.Add("Seat  Assigned");
+            for (int i = 0; i < assignedSeats.Count; i++)
+            {
+                if (assignedSeats.Contains("Seat " + (i + 1)))
+                    continue;
+                else
+                {
+                    assignedSeats.Add("Seat " + (i + 1));
+                }
 
 
+            }
 
             #endregion
-
+            ///Remove the seat from the chart list
             seatingChart.RemoveAt(0);
 
         }
